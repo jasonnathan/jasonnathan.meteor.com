@@ -1,7 +1,7 @@
 FitTheText = function() {
   $('.mainNav a').fitText(1.1, {
     // minFontSize: '10px',
-    maxFontSize: '25px'
+    maxFontSize: '45px'
   });
   $('.backdrop h2').fitText(.75, {
     minFontSize: '10px',
