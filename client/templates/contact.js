@@ -1,3 +1,3 @@
-Template.contact.rendered = function() {
+Template.about.rendered = function() {
 
 }

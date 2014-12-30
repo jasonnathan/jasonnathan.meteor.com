@@ -1,0 +1,74 @@
+.page{
+    .absolute;
+    // .viewportRatio(3, 4);
+    margin: auto;
+}
+
+@media all and (orientation:portrait) {
+
+  #freelancerBar {
+    margin-top:5vh;
+  }
+
+  .page{
+    top:9vh;
+  }
+}
+
+
+
+
+@media all and (orientation:landscape) {
+
+  .page{
+    top:10vh;
+  }
+}
+
+
+
+
+
+@media only screen and (-moz-min-device-pixel-ratio: 2),
+       only screen and (-o-min-device-pixel-ratio: 2/1),
+       only screen and (-webkit-min-device-pixel-ratio: 2),
+       only screen and (min-device-pixel-ratio: 2) {
+
+
+  @media all and (orientation:portrait) {
+    #mainNav{
+      ul{
+        li{
+          a{
+            font-size:1.1rem;
+          }
+        }
+      }
+    }
+  }
+  @media all and (orientation:landscape) {
+  }
+
+}
+
+
+
+
+// @bg-color: rgba(170, 185, 244, 1);
+@bg-color:rgb(21, 96, 189);
+@darker-bg-color:rgb(6, 70, 150);
+@linkColor:rgba(211, 28, 91, 0.8);
+
+.widthHeight(@w, @h){
+  width:@w vw;
+  height:@h vh;
+}
+
+.absolute{
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+

@@ -1,107 +1,57 @@
 <head>
-    <meta charset="text/html;charset=utf-8">
-    <meta name="viewport" content="width=1024" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="viewport" content="initial-scale=1.0,user-scalable=0, minimal-ui" />
-    <title>Jason Nathan | Developer, Designer, Administrator, Open Source Enthusiast, Singapore</title>
-    <meta name="description" content="I build websites. View this site on your desktop. I write PHP, HTML, CSS, JavaScript & half a dozen other languages. I use Node.js, Meteor.js, WordPress, MySQL, MongoDB and many other frameworks. I create cross platform solutions spanning security based applications to social networks" />
-    <meta name="author" content="Jason Nathan" />
-    <meta name="keywords" content="online work, hire, outsourcing, freelance, contractor, expert programmer, developer, coder, web designer, graphic designer, PHP, MySQL, Linux, Wordpress, Ajax, illustrator, administrator, SEO, XHTML, CSS, iPhone developer, Android Developer, .NET Developer" />
-    <!--<link rel="shortcut icon" href="favicon.png" />-->
-    <!--<link rel="apple-touch-icon" href="apple-touch-icon.png" />-->
-    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.6/webfont.js"></script>
+  <meta charset="text/html;charset=utf-8">
+  <meta name="viewport" content="width=1024" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="initial-scale=1.0,user-scalable=0, minimal-ui" />
+  <title>Jason Nathan | Developer, Designer, Administrator, Open Source Enthusiast, Singapore</title>
+  <meta name="description" content="I build websites. View this site on your desktop. I write PHP, HTML, CSS, JavaScript & half a dozen other languages. I use Node.js, Meteor.js, WordPress, MySQL, MongoDB and many other frameworks. I create cross platform solutions spanning security based applications to social networks" />
+  <meta name="author" content="Jason Nathan" />
+  <meta name="keywords" content="online work, hire, outsourcing, freelance, contractor, expert programmer, developer, coder, web designer, graphic designer, PHP, MySQL, Linux, Wordpress, Ajax, illustrator, administrator, SEO, XHTML, CSS, iPhone developer, Android Developer, .NET Developer" />
+  <!--<link rel="shortcut icon" href="favicon.png" />-->
+  <!--<link rel="apple-touch-icon" href="apple-touch-icon.png" />-->
+  <script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.6/webfont.js"></script>
+
+
 </head>
 <body>
-    <div id="container">
-        <nav class="navContainer">
-            <ul class="mainNav" id="firstNav">
-                <li><a href="#" class="nav-home active">HOME</a></li>
-                <li><a href="#" class="nav-contact">CONTACT</a></li>
-                <li><a href="#" class="nav-portfolio">PORTFOLIO</a></li>
-            </ul>
+  <div id="container">
+    <!-- <img src="/images/Views/Home.png"> -->
+    <!--     <section id="constrain">
+    </section> -->
+    <section id="contentConstrain">
+      <div id="topMostHeader">
+        <section id="starHeader">
+          <img src="/images/Vectors/Star_Header.svg">
+        </section>
+        <nav id="mainNav">
+          <ul>
+            <li><a href="#" class="nav-home active">Start</a></li>
+            <li><a href="#" class="nav-contact">Links</a></li>
+            <li><a href="#" class="nav-portfolio">Works</a></li>
+          </ul>
+          <!-- <hr> -->
         </nav>
-        <div class="page" id="home">
-              <header class="topBanner">
-                <div class="imgContainer">
-                    <!-- <img src="/images/jason-header.svg" alt="Jason Nathan" /> -->
-                    {{> jasonSVG}}
-                </div>
-            </header>
-            <section class="contentArea">
-            <aside class="sideBar leftBar">
-                <section class="halfWidget roleShowcase">
-                <div class="widget">
-                    <header class="backdrop">
-                        <h2 class="txt">Freelance</h2>
-                    </header>
-                    <header>
-                        <ul class="interchanger">
-                            <li><h1 class="interchange headerScript">WEB</h1></li>
-                            <li><h1 class="interchange headerScript">MOBILE</h1></li>
-                            <li><h1 class="interchange headerScript">APP</h1></li>
-                        </ul>
-                    </header>
-                    <header>
-                        <h3 class="sans headerDesignation">Developer</h3>
-                    </header>
-                </div>
-                </section>
-                <section class="halfWidget salesPitch">
-                    <p class="left-testimonial">I need something <strong class="txt">exciting</strong> to show my products & services...</p>
-                </section>
-            </aside>
-            <section class="mainContent" id="homeContentArea">
-<!--                 <section class="roleHeader">
-                    <header>
-                        <h3 class="headerScript mainContentRole">Server Administrator</h3>
-                    </header>
-                </section> -->
-            </section>
-            <aside class="sideBar rightBar">
-                <section class="halfWidget roleShowcase">
-                <div class="widget">
-                    <header class="backdrop">
-                        <h2>Freelance</h2>
-                    </header>
-                    <header>
-                        <ul class="interchanger">
-                            <li><h1 class="interchange headerScript">WEB</h1></li>
-                            <li><h1 class="interchange headerScript">MOBILE</h1></li>
-                            <li><h1 class="interchange headerScript">APP</h1></li>
-                        </ul>
-                    </header>
-                    <header>
-                        <h3 class="sans headerDesignation">Designer</h3>
-                    </header>
-                </div>
-                </section>
-                <section class="halfWidget salesPitch">
-                    <p class="right-testimonial">I am so <strong>bored</strong> with all these website templates and themes...</p>
+      </div>
+      {{> home}}
+      {{> about}}
+      {{> work}}
+      <footer>
+        A design collaboration by <a href="http://jasonnathan.com">Jason Nathan</a> & <a href="http://www.Nubrink.com" target="_blank">Nubrink Design</a>
+      </footer>
+    </section>
+  </div>
+<!-- Place this tag in your head or just before your close body tag. -->
 
-                </section>
-                <section class="halfWidget salesPitch">
-                    <p class="right-testimonial">I am so <strong>bored</strong> with all these website templates and themes...</p>
+<!-- <script src="https://apis.google.com/js/platform.js" async defer></script> -->
 
-                </section>
-                <section class="halfWidget salesPitch">
-                    <p class="right-testimonial">I am so <strong>bored</strong> with all these website templates and themes...</p>
+<!-- <div id="fb-root"></div> -->
 
-                </section>
-                <section class="halfWidget salesPitch">
-                    <p class="right-testimonial">I am so <strong>bored</strong> with all these website templates and themes...</p>
-
-                </section>
-                <section class="halfWidget salesPitch">
-                    <p class="right-testimonial">I am so <strong>bored</strong> with all these website templates and themes...</p>
-
-                </section>
-            </aside>
-            </section>
-
-
-        </div>
-        <!-- END PAGE -->
-        {{> contact}}
-    </div>
-    <!-- END CONTAINER -->
+<!-- <script>(function(d, s, id) {
+//   var js, fjs = d.getElementsByTagName(s)[0];
+//   if (d.getElementById(id)) return;
+//   js = d.createElement(s); js.id = id;
+//   js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appId=120061034729536&version=v2.0";
+//   fjs.parentNode.insertBefore(js, fjs);
+// }(document, 'script', 'facebook-jssdk'));
+</script> -->
 </body>
