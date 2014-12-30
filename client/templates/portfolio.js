@@ -49,7 +49,7 @@ Template.work.rendered = function() {
     currentWorkScale = .33;
     tl.add(tw({
       e: "#start",
-      scale: 7,
+      scale: 7.5,
     }))
       .add(tw({
         e: "#about",
