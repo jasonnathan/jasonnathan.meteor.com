@@ -1,5 +1,13 @@
 Template.work.rendered = function() {
-  var removeActive = function(element) {
+
+  var revealOpts = {
+      margin: 0,
+      center: false,
+      transition: "page",
+      maxScale: 3.0,
+      previewLinks: true
+    },
+    removeActive = function(element) {
       $("#mainNav a").each(function() {
         return $(this).removeClass('active');
       });
@@ -26,7 +34,7 @@ Template.work.rendered = function() {
 
       return TweenLite.to(params.e, 1.1, opts)
     };
-
+  Reveal.initialize(revealOpts);
   $('.nav-home, #startHeader').click(function(e) {
     e.preventDefault();
     removeActive($('.nav-home'));
@@ -67,6 +75,7 @@ Template.work.rendered = function() {
 
   $('.nav-portfolio, #workHeader').click(function(e) {
     e.preventDefault();
+    Reveal.initialize(revealOpts);
     removeActive($('.nav-portfolio'));
     currentWorkScale = 1;
     tl.add(tw({
