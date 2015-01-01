@@ -1,8 +1,10 @@
 Template.work.rendered = function() {
-  var Home = $("#start"),
-    Contact = $("#contact"),
-    Portfolio = $("#work"),
-    Current = "home",
+  var removeActive = function(element) {
+      $("#mainNav a").each(function() {
+        return $(this).removeClass('active');
+      });
+      element && element.addClass('active');
+    },
     tl = new TimelineLite,
     currentWorkScale = .1111,
     tw = function(params) {
@@ -25,9 +27,9 @@ Template.work.rendered = function() {
       return TweenLite.to(params.e, 1.1, opts)
     };
 
-
-  $('.nav-home').click(function(e) {
+  $('.nav-home, #startHeader').click(function(e) {
     e.preventDefault();
+    removeActive($('.nav-home'));
     currentWorkScale = .1111;
     tl.add(tw({
       e: "#start",
@@ -44,8 +46,9 @@ Template.work.rendered = function() {
     }), "-=1.1");
   });
 
-  $('.nav-contact').click(function(e) {
+  $('.nav-contact, #aboutHeader').click(function(e) {
     e.preventDefault();
+    removeActive($('.nav-contact'));
     currentWorkScale = .33;
     tl.add(tw({
       e: "#start",
@@ -62,16 +65,17 @@ Template.work.rendered = function() {
       }), "-=1.1")
   });
 
-  $('.nav-portfolio').click(function(e) {
+  $('.nav-portfolio, #workHeader').click(function(e) {
     e.preventDefault();
+    removeActive($('.nav-portfolio'));
     currentWorkScale = 1;
     tl.add(tw({
       e: "#start",
-      scale: 7,
+      scale: 7.5,
     }));
     tl.add(tw({
       e: "#about",
-      scale: 7,
+      scale: 7.5,
       // top: 0,
     }), "-=.9");
     tl.add(tw({

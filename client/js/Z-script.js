@@ -12,20 +12,62 @@ Audiowide
  */
   WebFont.load({
     google: {
-      families: ['Combo::latin', 'Audiowide::latin', 'Bubbler+One::latin'],
+      families: ['Combo::latin', 'Audiowide::latin', 'Krona+One::latin'],
       text: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ,./!?()*&^%$#+_-1234567890[]{}"
     },
     active: function() {
       FitTheText();
       var li = $(".interchanger li"),
+        mainHeader = function(text) {
+          var tl = new TimelineLite({
+              // onStart: FitTheText,
+              // onComplete: FitTheText
+            }),
+            i, chars, centerIndex;
+          tl.from(text, 1.8, {
+            x: (i - centerIndex) * 40,
+            opacity: 0,
+            ease: Power2.easeOut
+          }, i * 0.1);
+          tl.fromTo(text, 1, {
+            z: 500,
+            textShadow: "-2px -2px 1px #fff",
+            visibility: "visible"
+          }, {
+            z: 0,
+            textShadow: "-2px -2px 1px rgb(6, 70, 150)",
+            ease: SlowMo.ease.config(0.1, 0.9)
+          }, 0);
+
+          return tl;
+        },
         Interchange = function() {
-          var height = li.find('h1').eq(0).css("height"),
-            leftHeaders = $(".leftBar .interchange"),
+          var leftHeaders = $(".leftBar .interchange"),
             rightHeaders = $(".rightBar .interchange"),
             sideBarTL = new TimelineMax({
               repeat: -1,
               align: "start"
             }),
+            setHeights = _.debounce(function(e) {
+              return setTimeout(function() {
+                var height = li.find('h1').eq(0).css("height");
+                TweenLite.set($(".interchanger"), {
+                  height: height
+                })
+                TweenLite.set($(".interchange,.interchange *"), {
+                  lineHeight: parseFloat(height) * 1.2 + "px"
+                })
+                TweenLite.set(li, {
+                  position: "absolute",
+                  top: 0,
+                  right: 0,
+                  left: 0,
+                  bottom: 0,
+                  height: height,
+                  onComplete: FitTheText
+                });
+              }, 1)
+            }, 500),
             animateNoun = function(parentElement, reverse) {
               var tl = new TimelineLite({
                   // onComplete: FitTheText,
@@ -81,28 +123,10 @@ Audiowide
               }, .1, 7);
               //tl.repeat(-1);
               return tl;
-            };
-          //console.log(height);
-          TweenLite.set($(".interchanger"), {
-            height: height
-          })
-          TweenLite.set($(".interchange,.interchange *"), {
-            lineHeight: height,
-            display: "block",
-            verticalAlign: "middle"
-          })
-          TweenLite.set(li, {
-            position: "absolute",
-            top: 0,
-            right: 0,
-            left: 0,
-            bottom: 0,
-            height: height,
-            onComplete: FitTheText
-          });
-
-          var i = 0,
+            },
+            i = 0,
             t;
+
           for (i = 0; i <= 2; i++) {
             sideBarTL.addLabel("left-start-" + i);
             t = leftHeaders.eq(i);
@@ -113,50 +137,13 @@ Audiowide
             sideBarTL.add(animateNoun(t, true), "left-start-" + i);
 
           }
-          console.log("running");
-          // leftHeaders.each(function() {
-          //   var t = $(this);
-          //   t.html(t.html().replace(/./g, "<div style='display:inline-block'>$&</div>").replace(/\s/g, " "));
-          //   rightTl.add(animateNoun(t));
-          // });
-          // rightHeaders.each(function() {
-          //   var t = $(this);
-          //   t.html(t.html().replace(/./g, "<div style='display:inline-block'>$&</div>").replace(/\s/g, " "));
-          //   rightTl.add(animateNoun(t, true), "leftStart");
-          // });
-          //rightTl
+          window.addEventListener("resize", setHeights, false);
+          setHeights();
         };
       setTimeout(Interchange, 1);
       mainHeader($('#startHeader'));
       mainHeader($('#aboutHeader'));
       mainHeader($('#workHeader'));
-
-      // startHeader
-
-      function mainHeader(text) {
-        var tl = new TimelineLite({
-            // onStart: FitTheText,
-            // onComplete: FitTheText
-          }),
-          i, chars, centerIndex;
-        tl.from(text, 1.8, {
-          x: (i - centerIndex) * 40,
-          opacity: 0,
-          ease: Power2.easeOut
-        }, i * 0.1);
-        tl.fromTo(text, 1, {
-          z: 500,
-          textShadow: "-1px -1px 1px #fff",
-          visibility: "visible"
-        }, {
-          z: 0,
-          textShadow: "-1px -1px 2px rgb(6, 70, 150)",
-          ease: SlowMo.ease.config(0.1, 0.9)
-        }, 0);
-
-        return tl;
-      }
     }
   });
-
-})
+});

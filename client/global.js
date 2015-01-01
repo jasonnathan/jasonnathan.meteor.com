@@ -1,21 +1,21 @@
 FitTheText = function() {
-  $('#mainNav a').fitText(1.3, {
+  $('#mainNav a').fitText(1.1, {
     minFontSize: '9px',
     maxFontSize: '50px'
   });
-  $('.mainHeader h1').fitText(.4, {
+  $('.mainHeader h1').fitText(.33, {
     // minFontSize: '10px',
     // maxFontSize: '45px'
   });
-  $('.freelancerBar h2').fitText(.5, {
+  $('.freelancerBar h2').fitText(.8, {
     // minFontSize: '10px',
     // maxFontSize: '45px'
   });
-  $('.interchange').fitText(.45, {
+  $('.interchange').fitText(.48, {
     minFontSize: '10px',
     // maxFontSize: '185px'
   });
-  $('.headerDesignation').fitText(.65, {
+  $('.headerDesignation').fitText(.9, {
     // minFontSize: '10px',
     // maxFontSize: '45px'
   });
