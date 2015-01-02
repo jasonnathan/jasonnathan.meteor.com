@@ -4,6 +4,47 @@
     margin: auto;
 }
 
+.bottomConstrain{
+  position: relative;
+  // flex:8;
+  // background:rgba(6, 70, 150, .3);
+  height: 100%;
+  max-width: 100%;
+  max-height: 60vh;
+  // overflow-y: hidden;
+  // overflow-x: hidden;
+  margin:auto;
+    h2{
+      // line-height: 10vh;
+    }
+  .slideImageHolder{
+    max-width: 100%;
+    max-height:70vh;
+    position:relative;
+    margin:auto;
+    overflow-y: auto;
+    img{
+      display: block;
+      margin:auto;
+      max-width:95%;
+      height: auto;
+      max-height:100%;
+      // max-height:100%;
+      transition:.3s ease all;
+      &:hover{
+        // transform:scale(1.1);
+      }
+    }
+  }
+  .slideContent{
+
+    p{
+      margin-top:1rem;
+      font-size:1.5rem;
+      line-height: 1rem;
+    }
+  }
+}
 
 .effect7
 {
@@ -67,6 +108,14 @@
        only screen and (-o-min-device-pixel-ratio: 2/1),
        only screen and (-webkit-min-device-pixel-ratio: 2),
        only screen and (min-device-pixel-ratio: 2) {
+
+.bottomConstrain{
+  .slideContent{
+    p{
+      line-height: 1.5rem;
+    }
+  }
+}
 
 
   @media all and (orientation:portrait) {
