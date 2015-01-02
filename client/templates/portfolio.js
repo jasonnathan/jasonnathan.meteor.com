@@ -3,9 +3,11 @@ Template.work.rendered = function() {
   var revealOpts = {
       margin: 0,
       center: false,
-      transition: "page",
+      // transition: "page",
       maxScale: 3.0,
-      previewLinks: true
+      previewLinks: true,
+      // mouseWheel: true,
+      viewDistance: 5
     },
     removeActive = function(element) {
       $("#mainNav a").each(function() {

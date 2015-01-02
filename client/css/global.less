@@ -8,7 +8,7 @@
 html, body{
   color:#fff;
   background-color: @bg-color;
-  font-family: "Combo", sans-serif;
+  font-family: "Cuprum", sans-serif;
   background-image: url(/images/Vectors/45-degree-fabric-light.png);
   // background-image: url(http://www.transparenttextures.com/patterns/clean-textile.png);
   //background-image: url(/images/Vectors/concrete-wall.png);
@@ -521,18 +521,32 @@ ul{
   // overflow-y: hidden;
   // overflow-x: hidden;
   margin:auto;
+    h2{
+      line-height: 10vh;
+    }
+  .slideImageHolder{
+    max-width: 100%;
+    max-height:70vh;
+    position:relative;
+    margin:auto;
+    overflow-y: auto;
     img{
       display: block;
       margin:auto;
-      max-width:100%;
+      max-width:98%;
       max-height:100%;
       transition:.3s ease all;
       &:hover{
         // transform:scale(1.1);
       }
     }
-    p{
-      font-size:1.5rem;
-    }
+  }
+  .slideContent{
 
+    p{
+      margin-top:1rem;
+      font-size:4vh;
+      line-height: 5vh;
+    }
+  }
 }

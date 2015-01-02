@@ -12,8 +12,8 @@ Audiowide
  */
   WebFont.load({
     google: {
-      families: ['Combo::latin', 'Audiowide::latin', 'Krona+One::latin'],
-      text: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ,./!?()*&^%$#+_-1234567890[]{}"
+      families: ['Combo::latin', 'Cuprum::latin'],
+      text: ""
     },
     active: function() {
       FitTheText();
