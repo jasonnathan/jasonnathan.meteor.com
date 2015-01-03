@@ -3,9 +3,10 @@ Template.work.rendered = function() {
   var revealOpts = {
       margin: 0,
       center: false,
-      // transition: "page",
+      embedded: true,
       maxScale: 3.0,
       previewLinks: true,
+      autoSlide: 10e3,
       // mouseWheel: true,
       viewDistance: 5
     },
