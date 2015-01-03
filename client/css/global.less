@@ -8,7 +8,7 @@
 html, body{
   color:#fff;
   background-color: @bg-color;
-  font-family: "Cuprum", sans-serif;
+  font-family: "Carme", sans-serif;
   background-image: url(/images/Vectors/45-degree-fabric-light.png);
   // background-image: url(http://www.transparenttextures.com/patterns/clean-textile.png);
   //background-image: url(/images/Vectors/concrete-wall.png);
@@ -21,7 +21,7 @@ html, body{
 
 
 a{
-  color:#9D1E60;
+  color:rgba(255, 165, 216, 0.97);
   outline:0;
   &:hover, &:focus{
     color:#FF0062;
@@ -172,7 +172,7 @@ img{
   -webkit-perspective: 1000;
   -webkit-transform: translate3d(0,0,0);
   h1{
-    // font-family: "Audiowide";
+    font-family: "Cuprum";
     text-shadow: -1px -1px 1px rgb(160, 151, 124);
     font-size: 8rem;
     line-height: 1.25 * 22vh;
@@ -213,6 +213,7 @@ img{
   display:flex;
   flex-direction:column;
   position:relative;
+  font-family: "Cuprum";
 }
 
 .widget, .widgetHorizontal{
@@ -234,6 +235,13 @@ img{
         flex:1;
       }
     }
+    &.socialWidget{
+      position: relative;
+      margin-top:6vh;
+      .fb-like{
+        float:left;
+      }
+    }
   }
 }
 
@@ -247,7 +255,7 @@ img{
     vertical-align: center;
     background:rgba(255, 255, 255, 0.8);
     color:#fff;
-    padding-top:1.4vh;
+    padding-top:1.6vh;
     // box-shadow: -1px -1px 1px #eee;
     margin: 0 2px;
     border-radius: 6vh;
@@ -328,7 +336,7 @@ img{
   font-size:1.05rem;
   // line-height: 0;
   margin:0;
-  // font-family: "Krona One";
+  font-family: "Carme";
 }
 
 
@@ -372,7 +380,7 @@ img{
     right: 2vw;
     margin:auto;
     text-align: center;
-    // overflow-x:scroll;
+    line-height: 4vh;
     ul{
       margin:auto;
       display: block;
@@ -449,12 +457,7 @@ footer{
 
 }
 
-.fb-like{
-  max-width:40%;
-  left:1vw;
-  top:0;
-  position:absolute;
-}
+
 
 #___plusone_0{
   max-width:40%;
@@ -514,4 +517,18 @@ ul{
     }
   }
 }
+}
+
+
+#login-buttons .login-button, .accounts-dialog .login-button{
+  height:2rem;
+  width:2rem;
+  .text-besides-image{
+    display:none;
+  }
+}
+
+#login-buttons .configure-button {
+background: transparent !important;
+border-color: transparent !important;
 }

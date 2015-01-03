@@ -15,3 +15,7 @@ fortawesome:fontawesome
 meteorhacks:kadira
 neo:reveal-js
 spiderable
+accounts-base
+accounts-google
+accounts-ui
+iron:router

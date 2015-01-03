@@ -1,5 +1,5 @@
 FitTheText = function() {
-  $('#mainNav a').fitText(1.1, {
+  $('#mainNav a').fitText(1, {
     minFontSize: '9px',
     maxFontSize: '50px'
   });
@@ -27,7 +27,7 @@ FitTheText = function() {
     // minFontSize: '10px',
     // maxFontSize: '45px'
   });
-  $('footer').fitText(4, {
+  $('footer').fitText(4.6, {
     // minFontSize: '10px',
     // maxFontSize: '45px'
   });

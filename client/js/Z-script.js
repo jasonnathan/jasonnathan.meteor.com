@@ -1,4 +1,8 @@
 Meteor.startup(function() {
+
+  addthis_config = {
+    "data_track_addressbar": true
+  };
   /**
 Audiowide
 ★Bubbler One
@@ -12,11 +16,12 @@ Audiowide
  */
   WebFont.load({
     google: {
-      families: ['Combo::latin', 'Cuprum::latin'],
+      families: ['Carme::latin', 'Cuprum::latin'],
       text: ""
     },
     active: function() {
       FitTheText();
+      addthis.toolbox(".addthis_toolbox");
       var li = $(".interchanger li"),
         mainHeader = function(text) {
           var tl = new TimelineLite({

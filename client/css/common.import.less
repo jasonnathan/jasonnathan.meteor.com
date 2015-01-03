@@ -4,7 +4,7 @@
     margin: auto;
 }
 
-.bottomConstrain{
+#container #contentConstrain .bottomConstrain{
   position: relative;
   // flex:8;
   // background:rgba(6, 70, 150, .3);
@@ -15,14 +15,14 @@
   // overflow-x: hidden;
   margin:auto;
     h2{
-      // line-height: 10vh;
+      line-height: 1vh;
     }
   .slideImageHolder{
     max-width: 100%;
     max-height:70vh;
     position:relative;
     margin:auto;
-    overflow-y: auto;
+    overflow-y: auto !important;
     img{
       display: block;
       margin:auto;
@@ -40,8 +40,15 @@
 
     p{
       margin-top:1rem;
-      font-size:1.5rem;
-      line-height: 1rem;
+      font-size:1.9rem;
+      line-height: 1.2rem;
+// background: rgba(255,255,255,.1);
+padding: .3rem;
+color:rgba(255,255,255, .8);
+text-shadow: -1px -1px 1px #555;
+a{
+  text-shadow: -1px -0px 1px #222;
+}
     }
   }
 }
@@ -109,10 +116,10 @@
        only screen and (-webkit-min-device-pixel-ratio: 2),
        only screen and (min-device-pixel-ratio: 2) {
 
-.bottomConstrain{
+#container #contentConstrain .bottomConstrain{
   .slideContent{
     p{
-      line-height: 1.5rem;
+      line-height: 2.2rem;
     }
   }
 }
@@ -140,7 +147,7 @@
 // @bg-color: rgba(170, 185, 244, 1);
 @bg-color:rgb(21, 96, 189);
 @darker-bg-color:rgb(6, 70, 150);
-@linkColor:rgba(211, 28, 91, 1);
+@linkColor:rgba(255, 96, 151, 0.8);
 
 .widthHeight(@w, @h){
   width:@w vw;
