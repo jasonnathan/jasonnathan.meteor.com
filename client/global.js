@@ -3,7 +3,7 @@ FitTheText = function() {
     minFontSize: '9px',
     maxFontSize: '50px'
   });
-  $('.mainHeader h1').fitText(.33, {
+  $('.mainHeader h1').fitText(.41, {
     // minFontSize: '10px',
     // maxFontSize: '45px'
   });
