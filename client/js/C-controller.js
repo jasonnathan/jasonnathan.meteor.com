@@ -6,7 +6,7 @@
       embedded: true,
       maxScale: 3.0,
       previewLinks: true,
-      autoSlide: 10e3,
+      // autoSlide: 10e3,
       // mouseWheel: true,
       viewDistance: 3
     },
@@ -57,7 +57,7 @@
 
       return ha;
     },
-    links: function() {
+    contact: function() {
       var ha = HomeAnimation,
         tl = ha.tl,
         tw = ha.tw;

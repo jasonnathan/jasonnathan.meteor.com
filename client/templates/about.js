@@ -1,0 +1,1 @@
+Template.about.rendered = FitTheText;

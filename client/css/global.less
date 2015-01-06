@@ -66,36 +66,24 @@ img{
 #contentConstrain{
     margin: auto;
     .absolute;
-    .viewportRatio(3, 3.5);
+    .viewportRatio(3, 4);
     height: @height;
     width: @width;
     max-height: @max-height;
     max-width: @max-width;
 };
-.zoomedBGImage{
-  position:absolute;
-  margin:auto;
-  background-repeat: no-repeat;
-  background-clip:padding-box;
-  overflow: hidden;
-  .viewportRatio(3, 4);
-    height: @height;
-    width: @width;
-    max-height: @max-height;
-    max-width: @max-width;
-}
-#contactBackground{
-  // top:-7vh;
-  // background-image: url(/images/Vectors/Ring.svg);
-  background-position: 50% 50%;
-  background-size:130% 90%;
-};
-#workBackground{
-  // top:-7vh;
-  // background-image: url(/images/Vectors/Diamond.svg);
-  background-position: 50% 50%;
-  background-size:100% 100%;
-};
+// .zoomedBGImage{
+//   position:absolute;
+//   margin:auto;
+//   background-repeat: no-repeat;
+//   background-clip:padding-box;
+//   overflow: hidden;
+//   .viewportRatio(3, 4);
+//     height: @height;
+//     width: @width;
+//     max-height: @max-height;
+//     max-width: @max-width;
+// }
 
 #mainNav{
   width: 100%;
@@ -168,14 +156,14 @@ img{
   width:100%;
   position:relative;
   // height:100%;
-  height:22vh;
+  height:21vh;
   -webkit-perspective: 1000;
   -webkit-transform: translate3d(0,0,0);
   h1{
-    font-family: "Cuprum";
+    font-family: "Voltaire";
     text-shadow: -1px -1px 1px rgb(160, 151, 124);
     font-size: 8rem;
-    line-height: 1.25 * 22vh;
+    line-height: 1.2 * 21vh;
     margin:auto;
     vertical-align: bottom;
     text-align: center;
@@ -185,6 +173,7 @@ img{
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
     cursor: pointer;
+    letter-spacing: .5vw;
   }
 }
 
@@ -193,7 +182,7 @@ img{
   position:relative;
   // max-height:60vh;
   display:flex;
-  top:2vh;
+  top:1vh;
   // background: rgba(0, 255, 255, 0.4);
   // flex-flow: row wrap;
 }
@@ -213,7 +202,7 @@ img{
   display:flex;
   flex-direction:column;
   position:relative;
-  font-family: "Cuprum";
+  font-family: "Voltaire";
 }
 
 .widget, .widgetHorizontal{
@@ -247,7 +236,7 @@ img{
 
 .widgetHorizontal{
   justify-content:center;
-  top:10vh;
+  // top:3vh;
   .iconCard{
     flex:1;
     font-size: 3vh;
@@ -336,7 +325,7 @@ img{
   font-size:1.05rem;
   // line-height: 0;
   margin:0;
-  font-family: "Carme";
+  // font-family: "Carme";
 }
 
 
@@ -436,7 +425,7 @@ footer{
   line-height: 1vh;
   font-size: smaller;
   text-shadow:none;
-  padding:2vh 0;
+  padding:.5vh 0;
   background-color: rgba(0, 0, 0, .2);
   // border-radius: 2vh;
   text-shadow:-1px -1px 5px rgba(0, 0, 0, .3);
@@ -531,4 +520,36 @@ ul{
 #login-buttons .configure-button {
 background: transparent !important;
 border-color: transparent !important;
+}
+
+.resetZoom {
+  .Pageitem {
+    transform: scale(1) !important;
+  }
+  //.reveal .slides>section, .reveal .slides>section>section
+  .reveal{
+    display:block !important;
+    overflow-y: scroll;
+    .slides {
+      left:0 !important;
+      right:0 !important;
+      top:0 !important;
+      > section, > section>section{
+        display:block !important;
+        position:relative !important;
+        margin:auto 2rem !important;
+        transform: none !important;
+        transition: none !important;
+        left:0 !important;
+        right:0 !important;
+        top:0 !important;
+        &.future{
+          opacity:1 !important;
+        }
+        .slideImageHolder{
+          max-height: 25vh !important;
+        }
+      }
+    }
+  }
 }

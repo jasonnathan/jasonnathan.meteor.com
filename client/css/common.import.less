@@ -19,12 +19,18 @@
     }
   .slideImageHolder{
     max-width: 100%;
-    max-height:70vh;
+    // max-height:75vh;
     position:relative;
+    bottom:0;
     margin:auto;
-    overflow-y: auto !important;
-    -webkit-overflow-scrolling: touch;
-    z-index: 0;
+
+    a{
+      display: block;
+      overflow-y: auto !important;
+      -webkit-overflow-scrolling: touch;
+      z-index: 0;
+      max-height: 50vh;
+    }
     img{
       display: block;
       margin:auto;
@@ -119,8 +125,12 @@ a{
        only screen and (min-device-pixel-ratio: 2) {
 
 #container #contentConstrain .bottomConstrain{
+  .slideImageHolder{
+    // max-height:60vh;
+  }
   .slideContent{
     p{
+      font-size:120%;
       line-height: 2.2rem;
     }
   }

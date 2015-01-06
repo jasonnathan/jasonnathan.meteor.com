@@ -1,0 +1,25 @@
+<template name="googleLayout">
+<div id="container">
+  {{> loginButtons}}
+  <section id="contentConstrain">
+    <div id="topMostHeader">
+      <section id="starHeader">
+        <img src="/images/Vectors/Star_Header.svg">
+      </section>
+      <nav id="mainNav">
+        <ul>
+          <li><a href="{{pathFor route='start'}}" class="nav-home {{isActiveRoute regex='start'}}">Start</a></li>
+          <li><a href="{{pathFor route='contact'}}" class="nav-contact {{isActiveRoute regex='contact'}}">Contact</a></li>
+          <li><a href="{{pathFor route='works'}}" class="nav-portfolio {{isActiveRoute regex='works'}}">Works</a></li>
+          <li><a href="{{pathFor route='works'}}" class="nav-articles {{isActiveRoute regex='works'}}">Articles</a></li>
+        </ul>
+        <!-- <hr> -->
+      </nav>
+    </div>
+   <div class="resetZoom">{{> yield}}</div>
+    <footer>
+      Copyright &copy; 2015 Jason Joseph Nathan. A design collaboration by <a href="http://jasonnathan.com">Jason Nathan</a> & <a href="http://www.Nubrink.com" target="_blank">Nubrink Design</a>
+    </footer>
+  </section>
+</div>
+</template>
