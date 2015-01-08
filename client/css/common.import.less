@@ -38,7 +38,7 @@
       height: auto;
       max-height:100%;
       // max-height:100%;
-      transition:.3s ease all;
+      .transition(".3s ease all");
       &:hover{
         // transform:scale(1.1);
       }
@@ -53,9 +53,9 @@
 // background: rgba(255,255,255,.1);
 padding: .3rem;
 color:rgba(255,255,255, .8);
-text-shadow: -1px -1px 1px #555;
+.text-shadow("-1px -1px 1px #555");
 a{
-  text-shadow: -1px -0px 1px #222;
+  .text-shadow("-1px -0px 1px #222");
 }
     }
   }
@@ -64,14 +64,14 @@ a{
 .effect7
 {
     position:relative;
-    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    .box-shadow("0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset");
 }
 .effect7:before, .effect7:after
 {
   content:"";
     position:absolute;
     z-index:-1;
-    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    .box-shadow("0 0 20px rgba(0,0,0,0.8)");
     top:0;
     bottom:0;
     left:10px;
@@ -82,7 +82,8 @@ a{
 {
   right:10px;
     left:auto;
-            transform:skew(8deg) rotate(3deg);
+            .transform("skew(8deg)");
+            .rotate(3deg);
 }
 
 

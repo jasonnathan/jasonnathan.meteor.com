@@ -4,7 +4,8 @@
 
 @import "common.import.less";
 @import "brandcolors.import.less";
-
+@import "1-prefixer.import.less";
+@import "flexbox.import.less";
 html, body{
   color:#fff;
   background-color: @bg-color;
@@ -15,7 +16,7 @@ html, body{
 
   overflow: hidden;
   -webkit-font-smoothing: subpixel-antialiased;
-  text-shadow:@darker-bg-color -1px -1px 1px;
+  .text-shadow(@darker-bg-color -1px -1px 1px);
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
@@ -103,18 +104,18 @@ img{
     // z-index: -1;
   }
   ul{
-    display: flex;
+    .flex-display();
     margin:0;
     padding:0;
     list-style: none;
-    justify-content:center;
-    align-items:center;
-    flex-wrap:wrap;
+    .justify-content(center);
+    .align-items(center);
+    .flex-wrap(wrap);
     margin:auto;
     width:95%;
 
     li{
-      flex:1;
+      .flex(1);
       // margin: 0 2%;
       // z-index: 1;
       height: 5vh;
@@ -122,7 +123,7 @@ img{
 
       a{
         position:relative;
-        transition: all 800ms ease;
+        .transition(all 800ms ease);
         z-index: 1;
         color: #fff;
         text-transform: uppercase;
@@ -132,7 +133,7 @@ img{
         font-weight:bold;
         text-align: center;
         background-image: url(/images/Vectors/Nav.svg);
-        background-size: cover;
+        .background-size(cover);
         background-repeat: no-repeat;
         text-align: center;
         background-origin: border-box;
@@ -145,7 +146,7 @@ img{
         -webkit-tap-highlight-color: rgba(255,0,0,0);
         &.active{
           color:rgba(255, 96, 151, 1);
-          text-shadow:1px 1px 10px rgba(255, 96, 151, .8);
+          .text-shadow(1px 1px 10px rgba(255, 96, 151, .8));
         }
       }
     }
@@ -158,10 +159,10 @@ img{
   // height:100%;
   height:21vh;
   -webkit-perspective: 1000;
-  -webkit-transform: translate3d(0,0,0);
+  .translate3d(0,0,0);
   h1{
     font-family: "Voltaire";
-    text-shadow: -1px -1px 1px rgb(160, 151, 124);
+    .text-shadow(-1px -1px 1px rgb(160, 151, 124));
     font-size: 8rem;
     line-height: 1.1 * 21vh;
     margin:auto;
@@ -170,7 +171,7 @@ img{
     text-align: center;
     text-transform: uppercase;
     max-width: 100%;
-    transform:scale(1.2, 1.3);
+    .transform(scale(1.2, 1.3));
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
     cursor: pointer;
@@ -183,7 +184,7 @@ img{
 .contentArea{
   position:relative;
   // max-height:60vh;
-  display:flex;
+  .flex-display();
   top:1vh;
   // background: rgba(0, 255, 255, 0.4);
   // flex-flow: row wrap;
@@ -192,38 +193,38 @@ img{
 .mainContent{
   height:100%;
   max-height:60vh;
-  flex:1.5;
+  .flex(1.5);
   position:relative;
 
 }
 
 .sideBar{
-  flex:1;
+  .flex(1);
   height:100%;
   bottom:0;
-  display:flex;
-  flex-direction:column;
+  .flex-display();
+  .flex-direction(column);
   position:relative;
   font-family: "Voltaire";
 }
 
 .widget, .widgetHorizontal{
-  display:flex;
-  align-items:center;
+  .flex-display();
+  .align-items(center);
   position:relative;
 }
 
 .widget{
-  flex-direction:column;
+  .flex-direction(column);
 
   header{
-    flex:1;
+    .flex(1);
     height:100%;
     width:99%;
 
     &:nth-child(2){
       ul{
-        flex:1;
+        .flex(1);
       }
     }
     &.socialWidget{
@@ -237,10 +238,10 @@ img{
 }
 
 .widgetHorizontal{
-  justify-content:center;
+  .justify-content(center);
   // top:3vh;
   .iconCard{
-    flex:1;
+    .flex(1);
     font-size: 3vh;
     display: block;
     vertical-align: center;
@@ -249,19 +250,19 @@ img{
     padding-top:1.6vh;
     // box-shadow: -1px -1px 1px #eee;
     margin: 0 2px;
-    border-radius: 6vh;
-    box-shadow: 1px 1px 2px @darker-bg-color;
+    .border-radius(6vh);
+    .box-shadow(1px 1px 2px @darker-bg-color);
     // border:1px solid #fff;
     height:6vh;
     text-align: center;
     max-width:6vh;
-    text-shadow:-1px -1px 1px #ccc;
+    .text-shadow(-1px -1px 1px #ccc);
     // transition: all 250ms cubic-bezier(0.600, -0.280, 0.735, 0.045);
-    transition: all 250ms ease;
+    .transition(all 250ms ease);
     &:active, &:hover{
       color:#fff !important;
-      transform:scale(1.2);
-      text-shadow:none !important;
+      .scale(1.2);
+      .text-shadow("none !important");
     }
     &#facebook {color:@bc-facebook; &:active, &:hover{background:@bc-facebook;}}
     &#skype{color:@bc-skype; &:active, &:hover{background:@bc-skype;}}
@@ -274,7 +275,7 @@ img{
 }
 
 .rightBar .widget{
-  justify-content:flex-end;
+  .justify-content(flex-end);
   text-align: left;
   .backdrop h2{
     text-align: right;
@@ -283,7 +284,7 @@ img{
 }
 
 .leftBar .widget{
-  justify-content:flex-start;
+  .justify-content(flex-start);
   text-align: right;
   .backdrop h2{
     text-align: left;
@@ -294,13 +295,13 @@ img{
 
 .freelancerBar {
   width:100%;
-  text-shadow:none !important;
+  .text-shadow("none !important");
   color:@bg-color;
-  display:flex;
+  .flex-display();
   background-color: #fff;
 
-  display:flex;
-  justify-content:center;
+  .flex-display();
+  .justify-content(center);
   .left{
     text-align: left;
   }
@@ -315,7 +316,7 @@ img{
     // font-family: "Krona One";
     vertical-align: bottom;
     text-transform: uppercase;
-    transition:.3s ease font-size;
+    .transition(".3s ease font-size");
     // background: rgba(255, 100, 255, 0.3);
     display:block;
   }
@@ -323,7 +324,7 @@ img{
 
 .headerDesignation{
   text-transform: uppercase;
-  transition:.3s ease font-size;
+  .transition(".3s ease font-size");
   font-size:1.05rem;
   // line-height: 0;
   margin:0;
@@ -348,7 +349,7 @@ img{
     width:100%;
     height:100%;
     h1{
-      transition:none;
+      .transition(none);
     }
   }
 }
@@ -360,7 +361,7 @@ img{
   margin:0;
   font-weight: bold;
   font-size:1.7rem;
-  transition:.3s ease font-size;
+  .transition(".3s ease font-size");
   // .absoluteStretch;
 }
 
@@ -399,19 +400,19 @@ img{
       width: 100%;
       text-align: center;
       color:#fff;
-      text-shadow:none;
+      .text-shadow(none);
     }
   }
 
   #about{
     // top:6vh;
-    transform:scale(.33);
+    .scale(.33);
 
 
   }
 
   #work{
-    transform:scale(.1111);
+    .scale(.1111);
     // background:rgba(255,2,255,.2);
   }
 
@@ -426,11 +427,10 @@ footer{
   max-height:2vh;
   line-height: 1vh;
   font-size: smaller;
-  text-shadow:none;
   padding:.5vh 0;
   background-color: rgba(0, 0, 0, .2);
   // border-radius: 2vh;
-  text-shadow:-1px -1px 5px rgba(0, 0, 0, .3);
+  .text-shadow(-1px -1px 5px rgba(0, 0, 0, .3));
 }
 
 .viewportRatio(@x, @y) {
@@ -466,48 +466,48 @@ footer{
   margin:auto;
 }
 .portfolioContainer{
-  // display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  align-content: center;
+  // .flex-display();
+  .flex-direction(column);
+  .align-items(center);
+  .justify-content(center);
+  .align-content(center);
   width:100%;
   height:100%;
   margin:auto;
 }
 #portfolioNav {
-    flex:1;
+    .flex(1);
     display:block;
     width:100%;
     clear:both;
     margin-bottom:1vh;
-ul{
-  display:flex;
-  margin:auto !important;
--webkit-margin-before: 0;
--webkit-margin-after: 0;
--webkit-margin-start: 0;
--webkit-margin-end: 0;
--webkit-padding-start: 0;
-  align-items:center;
-  justify-content:center;
-  align-content: center;
-  list-style: none;
-  flex-wrap:no-wrap;
-  li{
-    flex:1 1 auto;
-    margin:auto 1vw;
-    padding:0;
-    text-align: center;
-    a{
-      color:white;
-      display:block;
-      padding:.3vh .8vw;
-      text-decoration: none;
-      border:1px solid white;
+    ul{
+      .flex-display();
+      margin:auto !important;
+      -webkit-margin-before: 0;
+      -webkit-margin-after: 0;
+      -webkit-margin-start: 0;
+      -webkit-margin-end: 0;
+      -webkit-padding-start: 0;
+      .align-items(center);
+      .justify-content(center);
+      .align-content(center);
+      list-style: none;
+      .flex-wrap(no-wrap);
+      li{
+        .flex("1 1 auto");
+        margin:auto 1vw;
+        padding:0;
+        text-align: center;
+        a{
+          color:white;
+          display:block;
+          padding:.3vh .8vw;
+          text-decoration: none;
+          border:1px solid white;
+        }
+      }
     }
-  }
-}
 }
 
 
@@ -526,7 +526,7 @@ border-color: transparent !important;
 
 .resetZoom {
   .Pageitem {
-    transform: scale(1) !important;
+    .scale(1) !important;
   }
   //.reveal .slides>section, .reveal .slides>section>section
   .reveal{
@@ -540,8 +540,8 @@ border-color: transparent !important;
         display:block !important;
         position:relative !important;
         margin:auto !important;
-        transform: none !important;
-        transition: none !important;
+        .transform ("none !important");
+        .transition("none !important");
         left:1rem !important;
         right:1rem !important;
         top:5rem !important;
