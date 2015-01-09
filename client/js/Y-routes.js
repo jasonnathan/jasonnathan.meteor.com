@@ -4,7 +4,7 @@ Router.configure({
 
 Router.route('/', {
   name: 'root',
-  layoutTemplate: 'normalLayout',
+  layoutTemplate: 'kubeLayout',
   onAfterAction: function() {
     SEO.set({
       title: 'Jason Nathan | Developer, Designer, Administrator, Consultant, Singapore',

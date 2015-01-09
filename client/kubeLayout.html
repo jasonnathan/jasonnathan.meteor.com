@@ -1,0 +1,27 @@
+<template name="kubeLayout">
+<div id="container">
+  <!-- {{> loginButtons}} -->
+  <section id="contentConstrain">
+    <div id="topMostHeader">
+      <section id="starHeader">
+        <img src="/images/Vectors/Star_Header.svg">
+      </section>
+      <nav id="mainNav">
+        <ul class="blocks-3 blocks-mobile-33">
+          <li><a data-tools="textfit" href="{{pathFor route='start'}}" id="jasonNav" class="active">Start</a></li>
+          <li><a data-tools="textfit" href="{{pathFor route='contact'}}" id="contactNav">Contact</a></li>
+          <li><a data-tools="textfit" href="{{pathFor route='works'}}" id="worksNav">Works</a></li>
+          <!-- <li><a href="{{pathFor route='works'}}" id="articlesNav">Articles</a></li> -->
+        </ul>
+        <!-- <hr> -->
+      </nav>
+    </div>
+    {{> home}}
+    {{> about}}
+    {{> works}}
+    <footer>
+      Copyright &copy; 2015 Jason Joseph Nathan. A design collaboration by <a href="http://jasonnathan.com">Jason Nathan</a> & <a href="http://www.Nubrink.com" target="_blank">Nubrink Design</a>
+    </footer>
+  </section>
+</div>
+</template>

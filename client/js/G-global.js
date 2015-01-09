@@ -3,19 +3,19 @@ FitTheText = function() {
     minFontSize: '9px',
     maxFontSize: '50px'
   });
-  $('.mainHeader h1').fitText(.45, {
+  $('.mainHeader h1').fitText(.35, {
     // minFontSize: '10px',
     // maxFontSize: '45px'
   });
-  $('.freelancerBar h2').fitText(.8, {
+  $('.freelancerBar h2').fitText(.41, {
     // minFontSize: '10px',
     // maxFontSize: '45px'
   });
-  $('.interchange').fitText(.48, {
-    minFontSize: '10px',
+  $('.interchange').fitText(.3, {
+    // minFontSize: '10px',
     // maxFontSize: '185px'
   });
-  $('.headerDesignation').fitText(.9, {
+  $('.headerDesignation').fitText(.42, {
     // minFontSize: '10px',
     // maxFontSize: '45px'
   });
@@ -31,7 +31,7 @@ FitTheText = function() {
     // minFontSize: '10px',
     // maxFontSize: '45px'
   });
-  //a.a_demo_three
+  // a.a_demo_three
   // $('.mainContentRole').fitText(1.1, {
   //   minFontSize: '10px',
   //   // maxFontSize: '185px'
