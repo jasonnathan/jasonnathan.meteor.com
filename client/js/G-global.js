@@ -1,21 +1,21 @@
 FitTheText = function() {
-  $('#mainNav a').fitText(1, {
-    minFontSize: '9px',
-    maxFontSize: '50px'
+  $('#mainNav a').fitText(.9, {
+    // minFontSize: '9px',
+    // maxFontSize: '50px'
   });
   $('.mainHeader h1').fitText(.35, {
     // minFontSize: '10px',
     // maxFontSize: '45px'
   });
-  $('.freelancerBar h2').fitText(.41, {
+  $('.freelancerBar h2').fitText(.55, {
     // minFontSize: '10px',
     // maxFontSize: '45px'
   });
-  $('.interchange').fitText(.3, {
+  $('.interchange').fitText(.35, {
     // minFontSize: '10px',
     // maxFontSize: '185px'
   });
-  $('.headerDesignation').fitText(.42, {
+  $('.headerDesignation').fitText(.55, {
     // minFontSize: '10px',
     // maxFontSize: '45px'
   });
