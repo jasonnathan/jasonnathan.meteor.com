@@ -1,29 +1,22 @@
 .Pageitem{
     .absolute;
-    // .viewportRatio(3, 4);
     margin: auto;
 }
 
 #container #contentConstrain .bottomConstrain{
   position: relative;
-  // flex:8;
-  // background:rgba(6, 70, 150, .3);
   height: 100%;
   max-width: 100%;
   max-height: 60vh;
-  // overflow-y: hidden;
-  // overflow-x: hidden;
   margin:auto;
-    h2{
-      line-height: 1vh;
-    }
+  h2{
+    line-height: 1vh;
+  }
   .slideImageHolder{
     max-width: 100%;
-    // max-height:75vh;
     position:relative;
     bottom:0;
     margin:auto;
-
     a{
       display: block;
       overflow-y: auto;
@@ -37,55 +30,48 @@
       max-width:95%;
       height: auto;
       max-height:100%;
-      // max-height:100%;
       .transition(.3s ease all);
       &:hover{
-        // transform:scale(1.1);
       }
     }
   }
   .slideContent{
-
     p{
       margin-top:1rem;
       font-size:1.9rem;
       line-height: 1.6rem;
-// background: rgba(255,255,255,.1);
-padding: .3rem;
-color:rgba(255,255,255, .8);
-text-shadow: -1px -1px 1px #555;
-a{
-  text-shadow: -1px -0px 1px #222;
-}
+      padding: .3rem;
+      color:rgba(255,255,255, .8);
+      text-shadow: -1px -1px 1px #555;
+      a{
+        text-shadow: -1px -0px 1px #222;
+      }
     }
   }
 }
 
-.effect7
-{
+.effect7{
     position:relative;
     .box-shadow("0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset");
-}
-.effect7:before, .effect7:after
-{
-  content:"";
-    position:absolute;
-    z-index:-1;
-    .box-shadow(0 0 20px rgba(0,0,0,0.8));
-    top:0;
-    bottom:0;
-    left:10px;
-    right:10px;
-    .border-radius(100px / 10px);
-}
-.effect7:after
-{
-  right:10px;
-    left:auto;
-            .transform(skew(8deg) rotate(3deg));
-}
 
+    &:before, &:after{
+      content:"";
+      position:absolute;
+      z-index:-1;
+      .box-shadow(0 0 20px rgba(0,0,0,0.8));
+      top:0;
+      bottom:0;
+      left:10px;
+      right:10px;
+      .border-radius(100px / 10px);
+    }
 
+    &:after{
+      right:10px;
+      left:auto;
+      .transform(skew(8deg) rotate(3deg));
+    }
+}
 
 @media all and (orientation:portrait) {
 
@@ -97,16 +83,6 @@ a{
     top:9vh;
   }
 
-.flexBox{
-  // flex: 2 2 25vw;
-  // min-height:20vw;
-}
-
-
-}
-
-
-
 
 @media all and (orientation:landscape) {
 
@@ -115,19 +91,12 @@ a{
   }
 }
 
-
-
-
-
 @media only screen and (-moz-min-device-pixel-ratio: 2),
        only screen and (-o-min-device-pixel-ratio: 2/1),
        only screen and (-webkit-min-device-pixel-ratio: 2),
        only screen and (min-device-pixel-ratio: 2) {
 
 #container #contentConstrain .bottomConstrain{
-  .slideImageHolder{
-    // max-height:60vh;
-  }
   .slideContent{
     p{
       font-size:120%;
@@ -137,40 +106,18 @@ a{
 }
 
 
-  @media all and (orientation:portrait) {
-    #mainNav{
-      ul{
-        li{
-          a{
-            font-size:1.1rem;
-          }
+@media all and (orientation:portrait) {
+  #mainNav{
+    ul{
+      li{
+        a{
+          font-size:1.1rem;
         }
       }
     }
   }
-  @media all and (orientation:landscape) {
-  }
-
+}
+@media all and (orientation:landscape) {
 }
 
-
-
-
-// @bg-color: rgba(170, 185, 244, 1);
-@bg-color:rgb(21, 96, 189);
-@darker-bg-color:rgb(6, 70, 150);
-@linkColor:rgba(255, 96, 151, 0.8);
-
-.widthHeight(@w, @h){
-  width:@w vw;
-  height:@h vh;
 }
-
-.absolute{
-  position: absolute;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-}
-
