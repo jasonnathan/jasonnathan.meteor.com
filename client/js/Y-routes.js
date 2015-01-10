@@ -91,3 +91,35 @@ Router.route('/works', {
     });
   }
 });
+
+SEO.config({
+  title: 'Jason Nathan | Developer, Designer, Administrator, Consultant, Singapore',
+  rel_author: 'https://www.google.com/+JasonNathan',
+  meta: {
+    description: 'Singapore Freelance Designer, Developer & E-marketing Consultant. WordPress Expert, Advanced JavaScript Programmer & absolutely loves Linux!',
+    classification: 'I am a Singaporean Freelancer. I create cross-platform solutions spanning security-based apps to Social Networks. I write PHP, HTML, CSS, JavaScript & half a dozen other languages. I use Meteor.js, WordPress, MySQL, MongoDB and many other frameworks.',
+    geography: 'Singapore',
+    city: 'Singapore',
+    language: 'English',
+    copyright: '2015 Jason Nathan',
+    author: 'Jason Nathan',
+    publisher: 'Jason Nathan',
+    distribution: 'global',
+    robots: 'Index, Follow'
+  },
+  og: {
+    title: 'Jason Nathan | Developer, Designer, Administrator, Consultant, Singapore',
+    description: 'Singapore Freelance Designer, Developer & E-marketing Consultant. WordPress Expert, Advanced JavaScript Programmer & absolutely loves Linux!',
+    site_name: 'Jason Nathan',
+    image: 'http://www.jasonnathan.com/images/og-jason.png',
+    type: 'website'
+  },
+  fb: {
+    admins: '1414137093'
+  },
+  twitter: {
+    card: 'summary',
+    site: '@jason_nathan',
+    creator: '@jason_nathan'
+  }
+});
