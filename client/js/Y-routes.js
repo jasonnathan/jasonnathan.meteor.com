@@ -1,5 +1,5 @@
 Router.configure({
-  layoutTemplate: 'normalLayout'
+  layoutTemplate: 'kubeLayout'
 });
 
 Router.route('/', {
