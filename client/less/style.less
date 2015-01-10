@@ -113,20 +113,42 @@ a{
         // background-origin: border-box;
         // background-position: 50% 50%;
         text-align: center;
-        height:80%;
+        height:100%;
         width:90%;
         margin: auto;
-        line-height: .75 * 5vh;
+        // line-height: .75 * 5vh;
         font-size:.8em;
         -webkit-tap-highlight-color: rgba(160, 219, 250,0);
         &.active{
           color:rgba(160, 219, 250, 1);
-          text-shadow:1px 1px 10px rgba(160, 219, 250, .8);
+          text-shadow:2px 2px 15px rgba(160, 219, 250, .1);
         }
         &:hover{
           box-shadow:0 -1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(160, 219, 250, .3) inset;
           //-webkit-box-shadow:0 -1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
         }
+        .outside {
+            .absolute;
+            .border-radius(3vh);
+            margin: 3px;
+            border: 3px dashed #CB9A00;
+            .box-shadow(0 0 0 1px #615F5F);
+        }
+
+        .inside {
+            .absolute;
+            .border-radius(3vh);
+            // padding-top:.5vh;
+            .box-shadow(0 0 0 1px #615F5F);
+        }
+        background-color:#076FC7;
+        color:#fff;
+        // padding-top:2vh;
+        .box-shadow(1px 1px 3px rgba(0,0,0,0.5));
+        border:2px solid transparent;
+        margin: 0 2px;
+        .border-radius(3vh);
+        background-image: url(http://www.transparenttextures.com/patterns/clean-textile.png);
       }
     }
   }
@@ -144,7 +166,7 @@ a{
   padding:0;
   h1{
     .absolute;
-    top:1vh;
+    top:2vh;
     // color:#E8E8E8;
     font-family: "Needlework" !important;
     // font-family: "Voltaire";
@@ -328,36 +350,66 @@ a{
   // top:3vh;
 
   .iconCard{
+    position:relative;
     box-sizing: border-box;
-    font-size: 3vh;
+    font-size: 2.5vh;
     width:32%;
     display: inline-block;
     vertical-align: center;
-    background:rgba(255, 255, 255, 0.8);
+    background-color:#076FC7;
     color:#fff;
-    padding-top:1vh;
-    // box-shadow: -1px -1px 1px #eee;
+    // padding-top:2vh;
+    .box-shadow(1px 1px 3px rgba(0,0,0,0.5));
+    border:2px solid transparent;
     margin: 0 2px;
     .border-radius(6vh);
-    .box-shadow(1px 1px 2px @darker-bg-color);
+    background-image: url(http://www.transparenttextures.com/patterns/clean-textile.png);
+
+    // box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    // -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
     // border:1px solid #fff;
     height:6vh;
     text-align: center;
     max-width:6vh;
-    text-shadow:-1px -1px 1px #ccc;
+    .scale(1.05);
+    text-shadow: -2px -2px 2px #0A67B5;
     .transition(all 250ms ease);
     &:active, &:hover{
       color:#fff !important;
       .scale(1.2);
       text-shadow:none !important;
     }
-    &#facebook {color:@bc-facebook; &:active, &:hover{background:@bc-facebook;}}
-    &#skype{color:@bc-skype; &:active, &:hover{background:@bc-skype;}}
-    &#stackoverflow{color:@bc-stackoverflow; &:active, &:hover{background:@bc-stackoverflow;}}
-    &#twitter{color:@bc-twitter; &:active, &:hover{background:@bc-twitter;}}
-    &#github{color:@bc-github; &:active, &:hover{background:@bc-github;}}
-    &#googleplus{color:@bc-google; &:active, &:hover{background:@bc-google;}}
-    &#linkedin{color:@bc-linkedin; &:active, &:hover{background:@bc-linkedin;}}
+    // &#facebook {&:active, &:hover{background-color:@bc-facebook;}}
+    // &#skype{&:active, &:hover{background-color:@bc-skype;}}
+    // &#stackoverflow{&:active, &:hover{background-color:@bc-stackoverflow;}}
+    // &#twitter{&:active, &:hover{background-color:@bc-twitter;}}
+    // &#github{&:active, &:hover{background-color:@bc-github;}}
+    // &#googleplus{&:active, &:hover{background-color:@bc-google;}}
+    // &#linkedin{&:active, &:hover{background-color:@bc-linkedin;}}
+    // &#facebook {color:@bc-facebook; &:active, &:hover{background:@bc-facebook;}}
+    // &#skype{color:@bc-skype; &:active, &:hover{background:@bc-skype;}}
+    // &#stackoverflow{color:@bc-stackoverflow; &:active, &:hover{background:@bc-stackoverflow;}}
+    // &#twitter{color:@bc-twitter; &:active, &:hover{background:@bc-twitter;}}
+    // &#github{color:@bc-github; &:active, &:hover{background:@bc-github;}}
+    // &#googleplus{color:@bc-google; &:active, &:hover{background:@bc-google;}}
+    // &#linkedin{color:@bc-linkedin; &:active, &:hover{background:@bc-linkedin;}}
+    .outside {
+        .absolute;
+        .border-radius(6vh);
+        margin: 3px;
+        border: 3px dashed #CB9A00;
+        .box-shadow(0 0 0 1px #615F5F);
+    }
+
+    .inside {
+        .absolute;
+        .border-radius(6vh);
+        padding-top:.5vh;
+        .box-shadow(0 0 0 1px #615F5F);
+    }
+
+
+
   }
 }
 
