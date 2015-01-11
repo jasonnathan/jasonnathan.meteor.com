@@ -8,25 +8,26 @@ Template.home.rendered = function() {
           align: "start"
         }),
         setHeights = _.debounce(function(e) {
-          return setTimeout(function() {
-            var height = li.find('h1').eq(0).css("height");
-            TweenLite.set($(".interchanger"), {
-              height: height
-            })
-            TweenLite.set($(".interchange,.interchange *"), {
-              lineHeight: parseFloat(height) * 1.2 + "px"
-            })
-            TweenLite.set(li, {
-              position: "absolute",
-              top: 0,
-              right: 0,
-              left: 0,
-              bottom: 0,
-              height: height,
-              onComplete: FitTheText
-            });
-          }, 1)
-        }, 500),
+      return setTimeout(function() {
+        FitTheText();
+        var height = li.find('h1').eq(0).css("height");
+        TweenLite.set($(".interchanger"), {
+          height: height
+        })
+        // TweenLite.set($(".interchange > div"), {
+        //   lineHeight: height
+        // })
+        TweenLite.set(li, {
+          position: "absolute",
+          top: 0,
+          right: 0,
+          left: 0,
+          bottom: 0,
+          height: height,
+          onUpdate: FitTheText
+        });
+      }, 1)
+        }, 500, true),
         animateNoun = function(parentElement, reverse) {
           var tl = new TimelineLite({
               // onComplete: FitTheText,

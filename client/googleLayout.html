@@ -1,13 +1,12 @@
 <template name="googleLayout">
 <div id="container">
-  {{> loginButtons}}
   <section id="contentConstrain">
     <div id="topMostHeader">
       <section id="starHeader">
         <img src="/images/Vectors/Star_Header.svg">
       </section>
       <nav id="mainNav">
-        <ul>
+        <ul class="blocks-3 blocks-mobile-33">
           <li><a href="{{pathFor route='start'}}" class="nav-home {{isActiveRoute regex='start'}}"><div class="outside"><div class="inside">Start</div></div></a></li>
           <li><a href="{{pathFor route='contact'}}" class="nav-contact {{isActiveRoute regex='contact'}}"><div class="outside"><div class="inside">Contact</div></div></a></li>
           <li><a href="{{pathFor route='works'}}" class="nav-portfolio {{isActiveRoute regex='works'}}"><div class="outside"><div class="inside">Works</div></div></a></li>

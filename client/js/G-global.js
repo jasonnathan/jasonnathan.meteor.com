@@ -3,19 +3,19 @@ FitTheText = function() {
     // minFontSize: '9px',
     // maxFontSize: '50px'
   });
-  $('.mainHeader h1').fitText(.35, {
+  // $('.mainHeader h1').fitText(.38, {
+  //   // minFontSize: '10px',
+  //   // maxFontSize: '45px'
+  // });
+  $('.freelancerBar h2').fitText(.65, {
     // minFontSize: '10px',
     // maxFontSize: '45px'
   });
-  $('.freelancerBar h2').fitText(.55, {
-    // minFontSize: '10px',
-    // maxFontSize: '45px'
-  });
-  $('.interchange').fitText(.35, {
+  $('.interchange').fitText(.43, {
     // minFontSize: '10px',
     // maxFontSize: '185px'
   });
-  $('.headerDesignation').fitText(.55, {
+  $('.headerDesignation').fitText(.6, {
     // minFontSize: '10px',
     // maxFontSize: '45px'
   });
@@ -42,3 +42,9 @@ FitTheText = function() {
   // });
 
 };
+
+// Create the listener function
+//var updateLayout = _.debounce(FitTheText, 10); // Maximum run of once per 500 milliseconds
+
+// Add the event listener
+//window.addEventListener("resize", updateLayout, false);
