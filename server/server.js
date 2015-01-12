@@ -1,0 +1,12 @@
+// BrowserPolicy.content.allowFontOrigin('*.bootstrapcdn.com');
+// BrowserPolicy.content.allowFontOrigin('*.bootstrapcdn.com');
+// BrowserPolicy.content.allowConnectOrigin("https://*.meteor.com");
+// BrowserPolicy.content.allowConnectOrigin("wss://*.meteor.com");
+// BrowserPolicy.content.allowConnectOrigin("https://localhost");
+// BrowserPolicy.content.allowConnectOrigin("wss://localhost");
+// BrowserPolicy.content.allowScriptOrigin("*.google-analytics.com");
+// BrowserPolicy.content.allowImageOrigin("*.google-analytics.com");
+// BrowserPolicy.content.allowScriptOrigin("platform.twitter.com");
+// BrowserPolicy.content.allowImageOrigin("platform.twitter.com");
+// BrowserPolicy.content.allowScriptOrigin("connect.facebook.net");
+// BrowserPolicy.content.allowImageOrigin("connect.facebook.net");
