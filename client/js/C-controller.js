@@ -14,7 +14,7 @@
       $("#mainNav a").each(function() {
         return $(this).removeClass('active');
       });
-      element && element.addClass('active');
+    element && element.addClass('active');
     },
     tw: function(params) {
       var opts = {

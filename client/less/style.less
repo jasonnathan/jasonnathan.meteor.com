@@ -101,22 +101,30 @@ a{
         display: table-cell;
         vertical-align: middle;
         z-index: 1;
-        color:rgba(160, 219, 250, 1);
+        // color:rgba(160, 219, 250, 1);
 
         // border-bottom:1px solid #fff;
-        box-shadow:0 -1px 4px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-        // -webkit-box-shadow:0 -1px 4px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+        // box-shadow:0 -1px 4px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+        .box-shadow(none);
         text-transform: uppercase;
         text-align: center;
         text-decoration: none;
         display: block;
         font-weight:bold;
         text-align: center;
-        // background-image: url(/images/Vectors/Nav.svg);
-        // .background-size(cover);
-        // background-repeat: no-repeat;
-        // background-origin: border-box;
-        // background-position: 50% 50%;
+        font-family: "Voltaire";
+        font-weight: bold;
+        // background-color:#076FC7;
+        // padding-top:2vh;
+        // border:2px solid transparent;
+        margin: 0 2px;
+        .border-radius(4px);
+        background-image: url(/images/Vectors/clean-textile.png);
+        .text-shadow(-1px -1px 1px rgba(6, 70, 150, 0.9));
+          color:rgba(255, 255, 255, .9);
+          background-color:rgba(6, 70, 150, 0.5);
+        // height:100%;
+        min-height:5.5vh;
         text-align: center;
         height:100%;
 
@@ -126,43 +134,33 @@ a{
         font-size:.8em;
         -webkit-tap-highlight-color: rgba(160, 219, 250,0);
         &.active{
-          // color:rgba(160, 219, 250, 1);
-          color: #fff;
-          box-shadow:0 -1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(160, 219, 250, .3) inset;
-          // text-shadow:2px 2px 15px rgba(160, 219, 250, .1);
+          .text-shadow(-1px -1px 1px rgba(6, 70, 150, 1));
+          color:rgba(255, 255, 255, .95);
+          background-color:rgba(6, 70, 150, 0.8);
         }
         &:hover{
-          box-shadow:0 -1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(160, 219, 250, .3) inset;
-          -webkit-box-shadow:0 -1px 4px rgba(0, 0, 0, 0.2), 0 0 40px rgba(0, 0, 0, 0.3) inset;
+          .text-shadow(-1px -1px 1px transparent);
+          background-color:rgba(6, 70, 150, 0.8);
         }
         .outside {
             .absolute;
-            .border-radius(3vh);
+            .border-radius(4px);
             display: table-cell;
             vertical-align: middle;
             margin: 3px;
-            border: 3px dashed #CB9A00;
-            .box-shadow(0 0 1px 1px #615F5F);
+            border: 2px dashed @stitch-color;
+            .box-shadow(0 0 3px 1px rgba(2, 44, 97, 0.9));
         }
 
         .inside {
             .absolute;
             height:100%;
-            .border-radius(3vh);
+            .border-radius(4px);
             display: table-cell;
             vertical-align: middle;
             padding-top:.3vh;
-            .box-shadow(0 0 1px 1px #615F5F);
+            .box-shadow(0 0 3px 1px rgba(6, 70, 150, 1));
         }
-        background-color:#076FC7;
-        // padding-top:2vh;
-        .box-shadow(1px 1px 3px rgba(0,0,0,0.5));
-        border:2px solid transparent;
-        margin: 0 2px;
-        .border-radius(3vh);
-        background-image: url(http://www.transparenttextures.com/patterns/clean-textile.png);
-        // height:100%;
-        min-height:5.5vh;
       }
     }
   }
@@ -306,10 +304,17 @@ a{
 
 .freelancerBar {
   width:100%;
-  text-shadow:none !important;
+  position: relative;
+  text-shadow: none;
   color:@bg-color;
-  background-color: #fff;
-  min-height: 4vh;
+  background-color:rgba(255, 255, 255, 0.95);
+  // box-shadow: 0 0 10px 1px rgba(0,0,0,.2);
+
+  height: 4vh;
+  // padding-top:2vh;
+  border:2px solid transparent;
+  margin: 0 2px;
+  // .border-radius(3vh);
   .left{
     text-align: left;
   }
@@ -317,7 +322,7 @@ a{
     text-align: right;
   }
   h2{
-    padding:.1rem .2rem;
+    padding:.1rem .3rem;
     font-weight: bold;
     font-size: .8rem;
     margin:0;
@@ -329,6 +334,7 @@ a{
     // background: rgba(255, 100, 255, 0.3);
     display:block;
     width: 100%;
+
   }
 }
 
@@ -386,12 +392,12 @@ a{
     width:100%;
     display: inline-block;
     vertical-align: center;
-    background-color:#076FC7;
+    background-color:rgba(6, 70, 150, 0.8);
     color:#fff;
     // padding-top:2vh;
     .box-shadow(1px 1px 3px rgba(0,0,0,0.5));
     border:2px solid transparent;
-    margin: 0 2px;
+    // margin: 0 2px;
     .border-radius(6vh);
     background-image: url(http://www.transparenttextures.com/patterns/clean-textile.png);
 
@@ -401,7 +407,7 @@ a{
     height:6vh;
     text-align: center;
     max-width:6vh;
-    text-shadow: -2px -2px 2px #0A67B5;
+    .text-shadow(-1px -1px 1px #111);
     .transition(all 250ms ease);
     &:active, &:hover{
       color:#fff !important;
@@ -425,16 +431,17 @@ a{
     .outside {
         .absolute;
         .border-radius(6vh);
-        margin: 3px;
-        border: 3px dashed #CB9A00;
-        .box-shadow(0 0 1px 1px #615F5F);
+        margin: 3px 1px 1px 3px;
+        border: 2px dashed @stitch-color;
+        //.box-shadow(0 0 1px 1px #615F5F);
+        .box-shadow(0 0 3px 1px rgba(2, 44, 97, 0.9));
     }
 
     .inside {
         .absolute;
         .border-radius(6vh);
         padding-top:.5vh;
-        .box-shadow(0 0 1px 1px #615F5F);
+        .box-shadow(0 0 1px 1px rgba(6, 70, 150, 1));
     }
 
 

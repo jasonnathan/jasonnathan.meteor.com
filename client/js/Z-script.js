@@ -32,9 +32,10 @@ Meteor.startup(function() {
       if (typeof addthis !== 'undefined')
         addthis.toolbox(".addthis_toolbox");
 
-      headerTexts = [$('#jasonHeader'), $('#contactHeader'), $('#worksHeader')];
-      menuItems = [$('#jasonNav'), $('#contactNav'), $('#worksNav')]
-      //setTimeout(Interchange, 1);
+
+      var headerTexts = [$('#jasonHeader'), $('#contactHeader'), $('#worksHeader')],
+        menuItems = [$('#jasonNav'), $('#contactNav'), $('#worksNav')]
+        //setTimeout(Interchange, 1);
 
       _.each(menuItems, function(element) {
         var cText = element.text().toLowerCase();
@@ -45,6 +46,7 @@ Meteor.startup(function() {
         if (HomeAnimation.hasOwnProperty(cText) && typeof HomeAnimation[cText] === "function") {
           element.on("click", function(e) {
             e.preventDefault();
+            // e.stopPropogation();
             HomeAnimation[cText]();
             HomeAnimation.removeActive(element);
             return false;
@@ -53,14 +55,11 @@ Meteor.startup(function() {
       });
 
       _.each(headerTexts, function(element) {
-        var cText = element.text().toLowerCase();
-        cText === "works" && Reveal.initialize(HomeAnimation.revealOpts);
-
-        if (HomeAnimation.hasOwnProperty(cText) && typeof HomeAnimation[cText] === "function") {
-          element.on("click", HomeAnimation[cText]);
-          if (!!mainHeader)
-            return mainHeader(element);
-        }
+        element
+          .css('cursor', 'pointer')
+          .on("click", function() {
+            return $("#" + element[0].id.toLowerCase().slice(0, -6) + "Nav").click();
+          });
       });
     }
   });
