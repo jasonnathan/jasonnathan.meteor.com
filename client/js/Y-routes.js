@@ -7,10 +7,10 @@ Router.route('/', {
   layoutTemplate: 'kubeLayout',
   onAfterAction: function() {
     SEO.set({
-      title: 'Jason Nathan | Developer, Designer, Administrator, Consultant, Singapore',
+      title: 'Jason Nathan | Freelance Designer, Developer & E-marketing Consultant',
       rel_author: 'https://www.google.com/+JasonNathan',
       meta: {
-        description: 'Singapore Freelance Designer, Developer & E-marketing Consultant. WordPress Expert, Advanced JavaScript Programmer & absolutely loves Linux!',
+        description: 'I am a Singaporean Freelancer, A WordPress Expert, an Advanced JavaScript Programmer & I absolutely love UI/UX Development!',
         classification: 'I am a Singaporean Freelancer. I create cross-platform solutions spanning security-based apps to Social Networks. I write PHP, HTML, CSS, JavaScript & half a dozen other languages. I use Meteor.js, WordPress, MySQL, MongoDB and many other frameworks.',
         geography: 'Singapore',
         city: 'Singapore',
@@ -22,8 +22,8 @@ Router.route('/', {
         robots: 'Index, Follow'
       },
       og: {
-        title: 'Jason Nathan | Developer, Designer, Administrator, Consultant, Singapore',
-        description: 'Singapore Freelance Designer, Developer & E-marketing Consultant. WordPress Expert, Advanced JavaScript Programmer & absolutely loves Linux!',
+        title: 'Jason Nathan | Freelance Designer, Developer & E-marketing Consultant',
+        description: 'I am a Singaporean Freelancer, A WordPress Expert, an Advanced JavaScript Programmer & I absolutely love UI/UX Development!',
         site_name: 'Jason Nathan',
         image: 'http://www.jasonnathan.com/images/og-jason.png',
         type: 'website'
@@ -93,11 +93,11 @@ Router.route('/works', {
 });
 
 SEO.config({
-  title: 'Jason Nathan | Developer, Designer, Administrator, Consultant, Singapore',
+  title: 'Freelance Developer, Designer & Consultant. I create apps for Web, Mobile & Desktops',
   rel_author: 'https://www.google.com/+JasonNathan',
   meta: {
-    description: 'Singapore Freelance Designer, Developer & E-marketing Consultant. WordPress Expert, Advanced JavaScript Programmer & absolutely loves Linux!',
-    classification: 'I am a Singaporean Freelancer. I create cross-platform solutions spanning security-based apps to Social Networks. I write PHP, HTML, CSS, JavaScript & half a dozen other languages. I use Meteor.js, WordPress, MySQL, MongoDB and many other frameworks.',
+    description: 'I am a Singaporean Web Developer, a WordPress Expert, an Advanced JavaScript Programmer. I absolutely love UI/UX Development! I have created social networks, booking apps & security software',
+    classification: 'I am a Singaporean Web Developer. I create cross-platform solutions spanning security-based apps to Social Networks. I write PHP, HTML, CSS, JavaScript & half a dozen other languages. I use Meteor.js, WordPress, MySQL, MongoDB and many other frameworks.',
     geography: 'Singapore',
     city: 'Singapore',
     language: 'English',
@@ -108,8 +108,8 @@ SEO.config({
     robots: 'Index, Follow'
   },
   og: {
-    title: 'Jason Nathan | Developer, Designer, Administrator, Consultant, Singapore',
-    description: 'Singapore Freelance Designer, Developer & E-marketing Consultant. WordPress Expert, Advanced JavaScript Programmer & absolutely loves Linux!',
+    title: 'Freelance Developer, Designer & Consultant. I create apps for Web, Mobile & Desktops',
+    description: 'I am a Singaporean Web Developer, a WordPress Expert, an Advanced JavaScript Programmer. I absolutely love UI/UX Development! I have created social networks, booking apps & security software',
     site_name: 'Jason Nathan',
     image: 'http://www.jasonnathan.com/images/og-jason.png',
     type: 'website'

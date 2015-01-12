@@ -50,9 +50,8 @@ Meteor.startup(function() {
 
       _.each(menuItems, function(element) {
         var cText = element.text().toLowerCase();
-        cText === "works" && Reveal.initialize(HomeAnimation.revealOpts);
-        if (cText === 'start')
-          cText = "jason";
+        cText === "works" && !Reveal.loaded && Reveal.initialize(HomeAnimation.revealOpts);
+        cText = cText === 'start' ? 'jason' : cText;
 
         if (HomeAnimation.hasOwnProperty(cText) && typeof HomeAnimation[cText] === "function") {
           element.on("click", function(e) {
@@ -79,11 +78,11 @@ Meteor.startup(function() {
     "data_track_addressbar": true
   };
 
-  return SEO.config({
-    title: 'Jason Nathan | Developer, Designer, Administrator, Consultant, Singapore',
+  SEO.config({
+    title: 'Freelance Developer, Designer & Consultant. I create apps for Web, Mobile & Desktops',
     rel_author: 'https://www.google.com/+JasonNathan',
     meta: {
-      description: 'Singapore Freelance Designer, Developer & E-marketing Consultant. WordPress Expert, Advanced JavaScript Programmer & absolutely loves Linux!',
+      description: 'I am a Singaporean Web Developer, a WordPress Expert, an Advanced JavaScript Programmer. I absolutely love UI/UX Development! I have created social networks, booking apps & security software',
       classification: 'I am a Singaporean Freelancer. I create cross-platform solutions spanning security-based apps to Social Networks. I write PHP, HTML, CSS, JavaScript & half a dozen other languages. I use Meteor.js, WordPress, MySQL, MongoDB and many other frameworks.',
       geography: 'Singapore',
       city: 'Singapore',
@@ -95,8 +94,8 @@ Meteor.startup(function() {
       robots: 'Index, Follow'
     },
     og: {
-      title: 'Jason Nathan | Developer, Designer, Administrator, Consultant, Singapore',
-      description: 'Singapore Freelance Designer, Developer & E-marketing Consultant. WordPress Expert, Advanced JavaScript Programmer & absolutely loves Linux!',
+      title: 'Freelance Developer, Designer & Consultant. I create apps for Web, Mobile & Desktops',
+      description: 'I am a Singaporean Web Developer, a WordPress Expert, an Advanced JavaScript Programmer. I absolutely love UI/UX Development! I have created social networks, booking apps & security software',
       site_name: 'Jason Nathan',
       image: 'http://www.jasonnathan.com/images/og-jason.png',
       type: 'website'
