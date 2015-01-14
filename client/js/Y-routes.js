@@ -25,7 +25,7 @@ Router.route('/', {
         title: 'Freelance Developer, Designer & Consultant. I create apps for Web, Mobile & Desktops',
         description: 'I am a Singaporean Freelancer, A WordPress Expert, an Advanced JavaScript Programmer & I absolutely love UI/UX Development!',
         site_name: 'Jason Nathan',
-        image: 'http://www.jasonnathan.com/images/og-jason.png',
+        image: 'http://www.jasonnathan.com/images/og-jasonnathan-com.jpg',
         type: 'website'
       },
       fb: {
@@ -111,7 +111,7 @@ SEO.config({
     title: 'Freelance Developer, Designer & Consultant. I create apps for Web, Mobile & Desktops',
     description: 'I am a Singaporean Web Developer, a WordPress Expert, an Advanced JavaScript Programmer. I absolutely love UI/UX Development! I have created social networks, booking apps & security software',
     site_name: 'Jason Nathan',
-    image: 'http://www.jasonnathan.com/images/og-jason.png',
+    image: 'http://www.jasonnathan.com/images/og-jasonnathan-com.jpg',
     type: 'website'
   },
   fb: {
