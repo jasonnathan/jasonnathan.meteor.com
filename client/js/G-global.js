@@ -27,7 +27,7 @@ FitTheText = function() {
     // minFontSize: '10px',
     // maxFontSize: '45px'
   });
-  $('footer').fitText(4.6, {
+  $('footer').fitText(6, {
     // minFontSize: '10px',
     // maxFontSize: '45px'
   });

@@ -259,10 +259,9 @@
   height:@h vh;
 }
 
-.absolute{
-  position: absolute;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
+
+.drop-shadow(@args){
+    -webkit-filter: drop-shadow(@args);
+    -moz-filter: drop-shadow(@args);
+    filter: drop-shadow(@args);
 }

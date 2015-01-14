@@ -6,16 +6,16 @@
       <section id="starHeader">
         <img src="/images/Vectors/Star_Header.svg">
       </section>
-      <nav id="mainNav">
-        <ul class="blocks-3 blocks-mobile-33">
-          <li>
-          <a href="{{pathFor route='start'}}" id="jasonNav" class="active"><div class="outside"><div class="inside">Start</div></div></a>
+      <nav id="mainNav" itemscope itemtype="http://schema.org/SiteNavigationElement">
+        <ul class="blocks-3 blocks-mobile-33" itemprop="about" itemscope itemtype="http://schema.org/ItemList">
+          <li itemprop="itemListElement">
+            <a href="{{pathFor route='start'}}" id="jasonNav" class="active"><div class="outside"><div class="inside">Start</div></div></a>
           </li>
-          <li>
-          <a href="{{pathFor route='contact'}}" id="contactNav"><div class="outside"><div class="inside">Contact</div></div></a>
+          <li itemprop="itemListElement">
+            <a href="{{pathFor route='contact'}}" id="contactNav"><div class="outside"><div class="inside">Contact</div></div></a>
           </li>
-          <li>
-          <a href="{{pathFor route='works'}}" id="worksNav"><div class="outside"><div class="inside">Works</div></div></a>
+          <li itemprop="itemListElement">
+            <a href="{{pathFor route='works'}}" id="worksNav"><div class="outside"><div class="inside">Works</div></div></a>
           </li>
           <!-- <li><a href="{{pathFor route='works'}}" id="articlesNav">Articles</a></li> -->
         </ul>
@@ -25,9 +25,22 @@
     {{> home}}
     {{> about}}
     {{> works}}
-    <footer>
-      Copyright &copy; 2015 Jason Joseph Nathan. A design collaboration by <a href="http://jasonnathan.com">Jason Nathan</a> & <a href="http://www.Nubrink.com" target="_blank">Nubrink Design</a>
-    </footer>
   </section>
+  <!--     <footer>
+    Copyright &copy; 2015 Jason Joseph Nathan. A design collaboration by <a href="http://jasonnathan.com">Jason Nathan</a> & <a href="http://www.Nubrink.com" target="_blank" rel="nofollow">Nubrink Design</a>
+  </footer> -->
+    <footer itemscope itemtype="http://schema.org/Person">
+
+       <p style="display:inline-block">
+       <span>Copyright &copy; 2015</span>
+       <img itemprop="image" src="http://gravatar.com/avatar/bc75373d96f89523c87f373888c348eb.jpg" alt="Jason Nathan" style="height:2vh;display:inline-block">
+       <span itemprop="name">Jason Nathan. </span> A
+       <span itemprop="jobTitle">Senior Developer</span> in
+       <span itemscope itemtype="http://schema.org/PostalAddress">
+          <span itemprop="addressCountry">Singapore</span>
+       </span>
+       </p>
+       A design collaboration by <a href="http://jasonnathan.com">Jason Nathan</a> & <a href="http://www.Nubrink.com" target="_blank" rel="nofollow">Nubrink Design</a>
+    </footer>
 </div>
 </template>
