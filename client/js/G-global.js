@@ -3,10 +3,7 @@ FitTheText = function() {
     // minFontSize: '9px',
     // maxFontSize: '50px'
   });
-  // $('.Person .item-row').fitText(3, {
-  //   // minFontSize: '10px',
-  //   // maxFontSize: '45px'
-  // });
+  $('.Person .item-row').fitText(3);
   $('.freelancerBar h2').fitText(.55, {
     // minFontSize: '10px',
     // maxFontSize: '45px'
