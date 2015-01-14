@@ -7,7 +7,7 @@ Router.route('/', {
   layoutTemplate: 'kubeLayout',
   onAfterAction: function() {
     SEO.set({
-      title: 'Jason Nathan | Freelance Designer, Developer & E-marketing Consultant',
+      title: 'Freelance Developer, Designer & Consultant. I create apps for Web, Mobile & Desktops',
       rel_author: 'https://www.google.com/+JasonNathan',
       meta: {
         description: 'I am a Singaporean Freelancer, A WordPress Expert, an Advanced JavaScript Programmer & I absolutely love UI/UX Development!',
@@ -22,7 +22,7 @@ Router.route('/', {
         robots: 'Index, Follow'
       },
       og: {
-        title: 'Jason Nathan | Freelance Designer, Developer & E-marketing Consultant',
+        title: 'Freelance Developer, Designer & Consultant. I create apps for Web, Mobile & Desktops',
         description: 'I am a Singaporean Freelancer, A WordPress Expert, an Advanced JavaScript Programmer & I absolutely love UI/UX Development!',
         site_name: 'Jason Nathan',
         image: 'http://www.jasonnathan.com/images/og-jason.png',
