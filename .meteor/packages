@@ -3,7 +3,6 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-meteor-platform
 insecure
 mrt:normalize.css
 jquery
@@ -22,3 +21,16 @@ manuelschoebel:ms-seo
 zimme:iron-router-active
 ryw:blog
 mrt:bootstrap-3
+standard-minifiers
+meteor-base
+mobile-experience
+mongo
+blaze-html-templates
+session
+tracker
+logging
+reload
+random
+ejson
+spacebars
+check
