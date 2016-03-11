@@ -6,6 +6,7 @@
       embedded: true,
       maxScale: 3.0,
       previewLinks: true,
+      fragments: false,
       // autoSlide: 10e3,
       // mouseWheel: true,
       viewDistance: 3

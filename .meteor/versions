@@ -69,6 +69,7 @@ iron:location@1.0.11
 iron:middleware-stack@1.0.11
 iron:router@1.0.12
 iron:url@1.0.11
+jasonnathan:reveal-js@2.6.2
 jquery@1.11.4
 kaptron:minimongoid@0.9.8
 launch-screen@1.0.4
@@ -97,7 +98,6 @@ mrt:fittext@1.2.0
 mrt:normalize.css@2.0.1
 mrt:underscore-string-latest@2.3.3
 natestrauser:animate-css@3.5.1
-neo:reveal-js@2.6.2
 npm-mongo@1.4.39_1
 oauth@1.1.6
 oauth2@1.1.5
