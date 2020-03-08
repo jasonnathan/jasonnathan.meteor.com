@@ -32,7 +32,6 @@ jobs:
     - name: Install Meteor
       run: curl https://install.meteor.com | /bin/sh
     - name: Build package
-      run: npm install --production
     - run: meteor build ./ --architecture os.linux.x86_64
     - name: Upload Artefact
       uses: actions/upload-artifact@v1
